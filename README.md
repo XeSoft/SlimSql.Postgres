@@ -76,8 +76,8 @@ let config =
 
 You can `merge` multiple `SqlOperation` s into a single statement to send them all to the database at once. This optimization allows you to pay the network round-trip latency only once for multiple operations. The only real requirement to use `merge` is to make sure your parameters start with `@` or some other standard prefix used by parameters.
 
-> **In case you are curious**
-> Whenever statements are merged, SlimSql adds an integer to the end of each parameter to ensure that parameters will not accidentally be used across different operations. The first operation will have 0 added to all its parameters, the second 1, and so forth. You will probably notice this if you examine the merged SqlOperation in the debugger.
+> **In case you are curious...**  
+Whenever statements are merged, SlimSql adds an integer to the end of each parameter to ensure that parameters will not accidentally be used across different operations. The first operation will have 0 added to all its parameters, the second 1, and so forth. You will probably notice this if you examine the merged SqlOperation in the debugger.
 
 ### Batching Writes
 
