@@ -218,7 +218,7 @@ let searchCourses searchOpt limit offset =
 
 ### Jsonb
 
-In F#, usually JSON or just a string. But Npgsql will always assume strings map to Postgres `text` or something similar. So you have to use `pTyped` to tell it about Jsonb.
+In F#, usually JSON is just a `string`. But Npgsql will always assume strings map to Postgres `text` or something similar. So you have to use `pTyped` to tell it about Jsonb.
 
 _I am not sure if this is required for Postgres `json` type since I have never used it._
 
